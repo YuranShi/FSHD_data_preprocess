@@ -1,0 +1,26 @@
+{
+    "id": "A286F917",
+    "path": "C:/Users/mshi/OneDrive - Dyne Therapeutics Inc/Code/FSHD_data_preprocess/expression2sample.R",
+    "project_path": "expression2sample.R",
+    "type": "r_source",
+    "hash": "274389380",
+    "contents": "",
+    "dirty": false,
+    "created": 1660924509355.0,
+    "source_on_save": false,
+    "relative_order": 3,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source",
+        "cursorPosition": "1,0",
+        "scrollLine": "0"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1657733620,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1657733620,
+    "read_only": false,
+    "read_only_alternatives": []
+}

@@ -1,0 +1,62 @@
+---
+title: "FSHD Biopsy Datasets"
+output: html_document
+---
+
+# FSHD Data Preprocess
+
+### Scripts
+
+-   `create_annotation.R`: create annotation file for ENSEMBL ID and gene symbol
+
+-   `expression2sample.R`: rename the sample with the GEO ID.
+
+-   `filter_samples.R`: Filter samples unrelated to FSHD based on keywords in metadata
+
+-   `matching_oligo.R`: Matching gene symbol and ENSEMBL ID to oligo studies.
+
+-   `matching_RNA_seq.R`: Matching gene symbol and ENSEMBL ID to RNA-seq studies.
+
+-   `normalization.R`: Normalize the expression values of RNA-seq studies.
+
+-   `patient2sample.R`: Convert patient ID to GSM accession.
+
+-   `probe2gene.R`: Convert probe ID to gene symbol.
+
+### Data
+
+This R project contains data from 10 FSHD biopsy datasets, retrieved from GEO data repository. Detailed information about the dataset is included in the table below.
+
+| Publication            | Dataset Accession | Platform                | Platform Accession |
+|-------------------|-----------------|--------------------|-----------------|
+| Wong et al. (2020)     | GSE140261         | RNA-seq                 | GPL16791           |
+| Wang et al. (2019)     | GSE115650         | RNA-seq                 | GPL16791           |
+| Yao et al. (2014)      | GSE56787          | RNA-seq                 | GPL16791           |
+| Rahimov et al. (2012)  | GSE36398          | in situ oligonucleotide | GPL6244            |
+| Tasca et al. (2012)    | GSE26852          | oligonucleotide beads   | GPL6947            |
+| Arashiro et al. (2009) | GSE15090          | in situ oligonucleotide | GPL570             |
+| Osborne et al. (2007)  | GSE10760          | in situ oligonucleotide | GPL96 and GPL97    |
+| Dixit et al. (2007)    | GSE9397           | in situ oligonucleotide | GPL96              |
+| Winokur et al. (2003)  | GSE3307           | in situ oligonucleotide | GPL96 and GPL97    |
+| Celegato et al. (2006) | GSE2820           | spotted DNA/cDNA        | GPL2011            |
+
+### Expression Data and Metadata
+
+FSHD data and metadata is contained in the /data and /meta folders. Folders are structured as follows:
+
+    /meta
+      GSE140261_meta.csv
+      GSE115650_meta.csv
+      ...
+    /data
+      /GSE140261
+        GSE140261.csv
+        GSE140261_normalized.csv
+      /GSE115650
+      ...
+
+GSEXXXXX_meta.csv contains sample accession and sample type (e.g. control vs. FSHD).
+
+GSEXXXXX.csv contains the (normalized) expression value for genes matched with the probe ID (for cDNA and oligo), official gene ID, and Ensembl gene ID.
+
+Note: for GSE36398, the probe ID could not match to the gene.
